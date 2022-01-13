@@ -3,7 +3,7 @@ import "./About.scss";
 import aboutimg from "./aboutimg.PNG";
 //using react-intersection-observer for scroll in-view tracking and framer-motion for animation
 import { useInView } from "react-intersection-observer";
-import { motion, useAnimation } from "framer-motion";
+import { motion, useAnimation } from "framer-motion/dist/es/index";
 
 const animateFadeLeft = {
   hidden: { opacity: 0, x: -200 },
