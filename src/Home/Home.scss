@@ -1,0 +1,109 @@
+.content {
+  width: 90%;
+  padding-left: 25%;
+  font-weight: 300;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+h1 {
+  font-weight: 800;
+  font-size: 3rem;
+}
+
+h3,
+p {
+  font-weight: 600;
+}
+
+img {
+  width: 90%;
+  height: 90%;
+}
+
+.name {
+  display: inline-block;
+}
+
+.text-zone {
+  span {
+    padding: 2px;
+  }
+  .klast {
+    color: #ff2b6b;
+    text-shadow: -1px 0 #08fdd8, -2px 0 #08fdd8, -3px 0 #08fdd8;
+    display: inline-block;
+    transform: rotate(180deg);
+    opacity: 0;
+    transition: opacity 0.3s 0.5s ease, transform 0.25s 0.5s ease;
+  }
+}
+
+.links {
+  display: flex;
+  justify-content: flex-start;
+  align-items: baseline;
+  i {
+    padding: 10px;
+    font-size: 22px;
+    &:hover {
+      color: #0dc4a5;
+    }
+  }
+}
+.hi {
+  display: inline-block;
+  color: #0dc4a5;
+  &:hover {
+    animation-name: sayhi;
+    animation-duration: 0.8s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0s;
+  }
+}
+
+.sayhi {
+  animation-name: sayhi;
+  animation-duration: 0.8s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0s;
+}
+
+@keyframes sayhi {
+  0% {
+    transform: rotate(-10deg);
+  }
+  20% {
+    transform: rotate(10deg);
+  }
+  50% {
+    transform: rotate(-5deg);
+  }
+  70% {
+    transform: rotate(5deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@media screen and (min-width: 924px) and (max-width: 1000px) {
+  .blast-root {
+    font-size: 45px;
+    color: #00cba9;
+  }
+}
+
+@media screen and (min-width: 377px) and (max-width: 600px) {
+  .blast-root {
+    font-size: 45px;
+    color: #00cba9;
+  }
+}
+
+@media screen and (max-width: 376px) {
+  .blast-root {
+    font-size: 2em;
+    color: #00cba9;
+  }
+}

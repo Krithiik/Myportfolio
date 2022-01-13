@@ -1,0 +1,25 @@
+nav div {
+  margin-right: 20px;
+  margin-left: 20px;
+  letter-spacing: 1px;
+}
+.nav-col {
+  background-color: #0a2540;
+}
+/* li {
+  color: #00cba9;
+  margin-right: 5px;
+} */
+
+li:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.brand,
+.brand:hover {
+  font-size: larger;
+  text-decoration: none;
+  color: #00cba9;
+  cursor: pointer;
+}

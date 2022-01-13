@@ -1,0 +1,90 @@
+.skillTitle {
+  font-weight: 800;
+  font-size: 35px;
+  margin-bottom: 10px;
+  span {
+    padding: 2px;
+  }
+}
+.skills {
+  margin-bottom: 50px;
+}
+.tab-pane {
+  color: white;
+  padding: 50px;
+}
+
+.skillsContainer {
+  width: 60%;
+  height: 730px;
+  background-color: #0a2540;
+  border-radius: 20px;
+  .nav-item {
+    margin-top: 20px;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+  .nav-link {
+    color: #00d4ff;
+    border-radius: 25px;
+  }
+}
+
+.datascience {
+  li {
+    font-size: x-large;
+  }
+  h1 {
+    font-size: 20px;
+  }
+}
+
+ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+}
+li {
+  &:hover {
+    text-decoration: none;
+    cursor: text;
+  }
+}
+
+.backend,
+.frontend {
+  h1 {
+    color: #8095ff;
+  }
+  h3 {
+    color: #a2a9ce;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .skillsContainer {
+    width: 80%;
+    height: 610px;
+  }
+  .backend,
+  .frontend {
+    h1 {
+      font-size: 19px;
+    }
+    h3 {
+      font-size: 15px;
+      margin-top: 12px;
+    }
+  }
+  .tab-pane {
+    padding-top: 10px;
+  }
+}
+
+@media screen and (max-width: 368px) {
+  .skillsContainer {
+    height: 665px;
+  }
+}
