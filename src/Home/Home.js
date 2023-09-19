@@ -1,8 +1,8 @@
 import React, { useEffect } from "react";
 import "./Home.scss";
-import "../blast.scss";
 import logo from "./workillus.jpg";
 import bounce from "../bounce.js";
+import Plane from "../plane/Plane";
 export default function Home() {
   useEffect(() => {
     bounce();
@@ -21,16 +21,16 @@ export default function Home() {
   }, []);
   return (
     <div id="home" className="home-container">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 200">
-        <path
-          fill="#0a2540"
-          fill-opacity="1"
-          d="M0,64L48,85.3C96,107,192,149,288,144C384,139,480,85,576,64C672,43,768,53,864,69.3C960,85,1056,107,1152,128C1248,149,1344,171,1392,181.3L1440,192L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"
-        ></path>
-      </svg>
+      <a
+        className="btn resumebtn"
+        href="https://drive.google.com/file/d/1wQEpGyo_v_KOM9P9h1n8e1hEhsJyp5WI/view?usp=sharing"
+      >
+        RESUME
+      </a>
+      <Plane />
       <div class="content container row">
         <div class="col-md-6 d-inline-block">
-          <div className="text-zone">
+          <div className="text-zone row">
             <h1 className="blast-root ">
               <span className="blast">H</span>
               <span className="blast">i</span>
@@ -53,21 +53,21 @@ export default function Home() {
                 <span className="blast">k</span>
               </div>
             </h1>
-          </div>
-          <p class="description">
-            A Web Developer and a Machine learning enthusiast{" "}
-          </p>
-          <div class="links">
-            <a href="https://www.linkedin.com/in/krithiik-s-412a91195/">
-              <i class="fab fa-linkedin-in"></i>
-            </a>
-            <a href="https://github.com/Krithiik">
-              <i class="fab fa-github"></i>
-            </a>
+            <p class="description">
+              A Web Developer and a Machine learning enthusiast{" "}
+            </p>
+            <div class="links">
+              <a href="https://www.linkedin.com/in/krithiik-s-412a91195/">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+              <a href="https://github.com/Krithiik">
+                <i class="fab fa-github"></i>
+              </a>
+            </div>
           </div>
         </div>
         <div class="col-md-6 ">
-          <img src={logo}></img>
+          <img className="home-pic" src={logo} alt="...."></img>
         </div>
       </div>
     </div>

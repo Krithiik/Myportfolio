@@ -1,108 +1,68 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import "./About.scss";
-import aboutimg from "./aboutimg.PNG";
-//using react-intersection-observer for scroll in-view tracking and framer-motion for animation
-import { useInView } from "react-intersection-observer";
-import { motion, useAnimation } from "framer-motion/dist/es/index";
-
-const animateFadeLeft = {
-  hidden: { opacity: 0, x: -200 },
-  visible: {
-    opacity: 1,
-    x: 0,
-    transition: {
-      duration: 2,
-    },
-  },
-};
-const animateFadeRight = {
-  hidden: { opacity: 0, x: 200 },
-  visible: {
-    opacity: 1,
-    x: 0,
-    transition: {
-      duration: 2,
-    },
-  },
-};
 export default function About() {
-  const controls = useAnimation();
-  const [ref, inView] = useInView();
+  const handleScroll = () => {
+    const elements = document.querySelectorAll(".bg-static");
+    const windowTop = window.scrollY;
+
+    elements.forEach((element) => {
+      const elementTop = element.offsetTop;
+      const leftPosition = windowTop - elementTop;
+
+      const bgMove = element.querySelector(".bg-move");
+      if (bgMove) {
+        bgMove.style.left = `${leftPosition}px`;
+      }
+    });
+  };
+
   useEffect(() => {
-    if (inView) {
-      controls.start("visible");
-    }
-  }, [controls, inView]);
+    handleScroll();
+    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("resize", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("resize", handleScroll);
+    };
+  }, []);
 
   return (
-    <div className="about">
-      <svg
-        id="aboutTopSvg"
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 1440 300"
-      >
-        <path
-          fill="#0a2540"
-          fill-opacity="1"
-          d="M0,288L1440,160L1440,320L0,320Z"
-        ></path>
-      </svg>
-      <div id="about" className="about-container">
-        <div className=" container row">
-          <motion.section
-            ref={ref}
-            animate={controls}
-            initial="hidden"
-            variants={animateFadeLeft}
-            className="about-title col-lg-6"
-          >
-            <div className="who d-inline-block">
-              <span className="blast">W</span>
-              <span className="blast">h</span>
-              <span className="blast">o</span>
-              <span> </span>
-              <span className="blast">A</span>
-              <span className="blast">m</span>
-              <span> </span>
-              <span className="blast">I</span>
-              <span> </span>
-              <span className="blast">?</span>
-              <span class="thinkEmoji">🤔</span>
-            </div>
-            <div className="aboutimg d-none d-lg-block">
-              <img class="img-fluid" src={aboutimg}></img>
-            </div>
-          </motion.section>
-
-          <motion.section
-            ref={ref}
-            animate={controls}
-            initial="hidden"
-            variants={animateFadeRight}
-            className="aboutme col-lg-6  d-flex justify-content-center align-items-center"
-          >
-            <p>
-              Currently pursuing Integrated M-tech CSE with specialization in
-              Data science at VIT, Vellore. Immensely interested in accquiring
-              new skills. Currently into Web development using MERN stack and
-              Data visualization, Machine learning using python. Being an
-              aspiring student,young, energetic, I look forward to learn more
-              and more, gain experience.
-            </p>
-          </motion.section>
-        </div>
+    <div className="About-container">
+      <div className="section bg-static">
+        <div className="bg-move about-plane"></div>
       </div>
-      <svg
-        id="bottomSvg"
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 1440 250"
-      >
-        <path
-          fill="#0a2540"
-          fill-opacity="1"
-          d="M0,192L1440,96L1440,0L0,0Z"
-        ></path>
-      </svg>
+      <h1 className="about-heading">About</h1>
+      <span class="header_line"></span>
+      <div className="about-content">
+        <p>
+          Hey there! I'm Krithiik, a computer science enthusiast with a passion
+          for all things tech and a heart that beats to the rhythm of music. By
+          day, I'm your friendly neighborhood full-stack web developer, crafting
+          digital experiences that dance on the web. I'm that kind of developer
+          who loves turning coffee into code and pixels into beautiful,
+          user-friendly interfaces.
+        </p>
+        <p>
+          But wait, there's more! By night, I transform into an ML wizard,
+          brewing up algorithms to decipher the secrets of data. From predicting
+          the stock market to teaching a computer to recognize cat memes, I'm
+          always up for a challenge in the world of machine learning.
+        </p>
+        <p>
+          Now, let's talk tunes! When I'm not coding or diving into the world of
+          machine learning, you'll find me lost in the melodies of my favorite
+          tunes. Whether I'm cranking up the volume on a road trip or relaxing
+          with some jazz while coding, you can bet that music plays a big role
+          in my creative process.
+        </p>
+        <p>
+          So, whether you're here to check out my coding adventures, learn about
+          my machine learning experiments, or just share your latest music
+          discovery, explore, enjoy, and don't hesitate to reach out. Let's make
+          some digital magic together!
+        </p>
+      </div>
     </div>
   );
 }

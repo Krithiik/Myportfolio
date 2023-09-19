@@ -1,0 +1,97 @@
+.Projects-container {
+  padding: 120px;
+  padding-top: 0%;
+  font-weight: 300;
+}
+
+@media screen and (min-width: 924px) and (max-width: 1000px) {
+  .Projects-container {
+    margin-top: 0px;
+  }
+}
+
+@media screen and (min-width: 377px) and (max-width: 924px) {
+  .Projects-container {
+    padding: 0px;
+    font-size: 15px;
+    font-weight: 300;
+  }
+  .h1 {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 378px) {
+  .Projects-container {
+    padding: 0%;
+    font-size: 10px;
+    font-weight: 300;
+  }
+  .Projects-heading {
+    font-size: 40px;
+  }
+}
+
+//card styling
+.card {
+  width: 48%;
+  margin-top: 20px;
+  background-color: #e8f1ff;
+}
+.card-title {
+  font-weight: bold;
+  font-size: 1.6em;
+}
+
+.card-img-top {
+  width: 100%;
+  height: 20vw;
+  object-fit: cover;
+}
+
+.tech-stack {
+  color: #e089f8;
+  font-weight: bold;
+}
+.projectGrid {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+@media screen and (min-width: 924px) and (max-width: 1000px) {
+  .Projects-container {
+    margin-top: 0px;
+  }
+  .card {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 377px) and (max-width: 924px) {
+  .Projects-container {
+    padding: 0px;
+    font-size: 15px;
+    font-weight: 300;
+  }
+  .h1 {
+    font-size: 20px;
+  }
+  .card {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 378px) {
+  .Projects-container {
+    padding: 0%;
+    font-size: 10px;
+    font-weight: 300;
+  }
+  .projects-heading {
+    font-size: 40px;
+  }
+  .card {
+    width: 100%;
+  }
+}

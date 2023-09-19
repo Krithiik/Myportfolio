@@ -1,0 +1,49 @@
+* {
+  box-sizing: border-box;
+}
+.plane-container {
+  min-height: 200px;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  background-color: #f5f5ef;
+}
+.plane {
+  height: 50px;
+  -webkit-animation: fly-in 1s 1s backwards, advance 4s 2s infinite;
+  animation: fly-in 1s 1s backwards, advance 4s 2s infinite;
+}
+
+@-webkit-keyframes fly-in {
+  from {
+    -webkit-transform: translate(-250%, 250%) scale(0);
+    transform: translate(-250%, 250%) scale(0);
+  }
+}
+@keyframes fly-in {
+  from {
+    -webkit-transform: translate(-250%, 250%) scale(0);
+    transform: translate(-250%, 250%) scale(0);
+  }
+}
+@-webkit-keyframes advance {
+  50% {
+    -webkit-transform: translate(50%, 50%) rotate(-10deg);
+    transform: translate(50%, 50%) rotate(-10deg);
+  }
+}
+@keyframes advance {
+  50% {
+    -webkit-transform: translate(50%, 50%) rotate(-10deg);
+    transform: translate(50%, 50%) rotate(-10deg);
+  }
+}
+
+@media screen and (max-width: 376px) {
+  .plane {
+    height: 40px;
+  }
+}
