@@ -3,6 +3,8 @@ import "./Home.scss";
 import logo from "./workillus.jpg";
 import bounce from "../bounce.js";
 import Plane from "../plane/Plane";
+const RESUME_LINK =
+  "https://drive.google.com/file/d/1D_gIlKABPmbONR7RNiOmaEAtxdHVU_hj/view?usp=sharing";
 export default function Home() {
   useEffect(() => {
     bounce();
@@ -21,10 +23,7 @@ export default function Home() {
   }, []);
   return (
     <div id="home" className="home-container">
-      <a
-        className="btn resumebtn"
-        href="https://drive.google.com/file/d/1wQEpGyo_v_KOM9P9h1n8e1hEhsJyp5WI/view?usp=sharing"
-      >
+      <a className="btn resumebtn" href={RESUME_LINK}>
         RESUME
       </a>
       <Plane />
