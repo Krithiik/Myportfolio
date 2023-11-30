@@ -57,7 +57,14 @@ h3,
       color: #0dc4a5;
     }
   }
+
+  svg {
+    &:hover {
+      fill: #0dc4a5;
+    }
+  }
 }
+
 .hi {
   display: inline-block;
   color: #0dc4a5;
