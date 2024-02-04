@@ -2,7 +2,7 @@ export default function Card(props) {
   let project = props.project;
   return (
     <div class="card">
-      <img src={project.img} class="card-img-top" alt="..."></img>
+      <img src={project.localImg} class="card-img-top" alt="..."></img>
       <div class="card-body">
         <h5 class="card-title">{project.name}</h5>
         <h9 class="tech-stack">{project.stack}</h9>
