@@ -28,7 +28,7 @@ export const projects = [
   },
   {
     img: "https://drive.google.com/uc?export=view&id=1b9OgwBEWnRTTquud_45XHSubg1PPR1A5",
-    localImg: "images/twitterSentiment.png",
+    localImg: "images/twitterSentiment.PNG",
     name: "HashTagMood",
     description:
       "Developed a webapp enabling users to track hashtag trends, offering tweet counts, popular tweets, and sentiment analysis over the last week. Implemented targeted ads feature for businesses and provide insights into user preferences.",
